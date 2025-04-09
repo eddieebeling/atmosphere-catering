@@ -1,15 +1,11 @@
 <template>
     <div class="atmosphere-catering__header animate__animated animate__fadeIn">
         <nav class="atmosphere-catering__nav">
-            <a href="https://www.google.com/" class="atmosphere-catering__link">Catering</a>
-            <a href="https://www.google.com/" class="atmosphere-catering__link">Events</a>
-            <a href="https://www.google.com/" class="atmosphere-catering__link">Parties</a>
+            <a v-for="(item, index) in leftNavLinks" :href="item.url" :key="index" class="atmosphere-catering__link">{{ item.text }}</a>
         </nav>
-      <img src="../../../atmosphere-logo.jpg" alt="Atomosphere Catering" class="atmosphere-catering__logo" />
+      <img :src="logoUrl" :alt="title" class="atmosphere-catering__logo" />
       <nav class="atmosphere-catering__nav">
-        <a href="https://www.google.com/" class="atmosphere-catering__link">Menus</a>
-        <a href="https://www.google.com/" class="atmosphere-catering__link">Pricing</a>
-        <a href="https://www.google.com/" class="atmosphere-catering__link">Contact</a>
+        <a v-for="(item, index) in rightNavLinks" :href="item.url" :key="index" class="atmosphere-catering__link">{{ item.text }}</a>
       </nav>
     </div>
 </template>
@@ -17,7 +13,19 @@
 <script setup lang="js">
 import { ref } from 'vue'
 
-const title = ref('Hello World')
+const title = ref('Atmosphere Catering')
+const logoUrl = ref('https://res.cloudinary.com/eddieebeling/image/upload/v1744216763/481854231_1419578952337847_6277475041924269601_n_putmyv.jpg');
+
+const leftNavLinks = ref([
+  { text: 'Catering', url: 'https://www.google.com/' },
+  { text: 'Events', url: 'https://www.google.com/' },
+  { text: 'Parties', url: 'https://www.google.com/' }
+]);
+const rightNavLinks = ref([
+  { text: 'Menus', url: 'https://www.google.com/' },
+  { text: 'Pricing', url: 'https://www.google.com/' },
+  { text: 'Contact', url: 'https://www.google.com/' }
+]);
 </script>
 
 <style lang="scss">
