@@ -1,5 +1,5 @@
 <template>
-  <div class="atomosphere-catering">
+  <div class="atomosphere-catering animate__animated animate__fadeIn">
     <NuxtPage />
   </div>
 </template>
