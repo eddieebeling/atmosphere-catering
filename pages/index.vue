@@ -82,8 +82,53 @@
       </p>
     </div>
   </div>
-  <div id="menus" class="atmosphere-catering__menus">MENU CONTENT</div>
-  <div id="pricing" class="atmosphere-catering__pricing">PRICING CONTENT</div>
+  <div id="pricing" class="atmosphere-catering__menus">
+    <h2>Catering &amp; Private Dining Pricing</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tristique dui
+      non maximus ultrices. Cras euismod interdum justo, et porttitor lacus
+      volutpat in. Phasellus varius consectetur elit, et luctus urna mattis id.
+    </p>
+    <div class="atmosphere-catering__menu-card-wrapper">
+      <div class="atmosphere-catering__menu-card">
+        <label>Catering for 5-20 People</label>
+        <strong>$27.99 <sup>per person</sup></strong>
+        <p>Morbi quis quam sollicitudin, dictum dolor in.</p>
+        <ul>
+          <li>Lorem ipsum, dolor sit amet consectetur</li>
+          <li>Adipiscing elit. Quisquam, voluptatum</li>
+          <li>Quisquam, voluptatum</li>
+          <li>Quisquam, voluptatum</li>
+          <li>Quisquam, voluptatum</li>
+        </ul>
+      </div>
+      <div class="atmosphere-catering__menu-card">
+        <label>Catering for 20-50 People</label>
+        <strong>$24.99 <sup>per person</sup></strong>
+        <p>Morbi quis quam sollicitudin, dictum dolor in.</p>
+        <ul>
+          <li>Lorem ipsum, dolor sit amet consectetur</li>
+          <li>Adipiscing elit. Quisquam, voluptatum</li>
+          <li>Quisquam, voluptatum</li>
+          <li>Quisquam, voluptatum</li>
+          <li>Quisquam, voluptatum</li>
+        </ul>
+      </div>
+      <div class="atmosphere-catering__menu-card">
+        <label>Private Dining Service</label>
+        <strong>$34.99 <sup>per person</sup></strong>
+        <p>Morbi quis quam sollicitudin, dictum dolor in.</p>
+        <ul>
+          <li>Lorem ipsum, dolor sit amet consectetur</li>
+          <li>Adipiscing elit. Quisquam, voluptatum</li>
+          <li>Quisquam, voluptatum</li>
+          <li>Quisquam, voluptatum</li>
+          <li>Quisquam, voluptatum</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="menus" class="atmosphere-catering__pricing">MENU CONTENT</div>
   <div id="contact" class="atmosphere-catering__contact">CONTACT CONTENT</div>
   <div id="footer" class="atmosphere-catering__footer">
     <span
@@ -122,41 +167,18 @@ const leftNavLinks = ref([
   { text: "Parties", anchor: "parties" },
 ]);
 const rightNavLinks = ref([
-  { text: "Menus", anchor: "menus" },
   { text: "Pricing", anchor: "pricing" },
+  { text: "Menus", anchor: "menus" },
   { text: "Contact", anchor: "contact" },
 ]);
 </script>
 
 <style lang="scss">
-@mixin respond-to($breakpoint) {
-  @if $breakpoint == small {
-    @media (max-width: 600px) {
-      & {
-        @content;
-      }
-    }
-  } @else if $breakpoint == medium {
-    @media (min-width: 601px) and (max-width: 900px) {
-      & {
-        @content;
-      }
-    }
-  } @else if $breakpoint == large {
-    @media (min-width: 901px) and (max-width: 1240px) {
-      & {
-        @content;
-      }
-    }
-  } @else if $breakpoint == xlarge {
-    @media (min-width: 1241px) {
-      & {
-        @content;
-      }
-    }
-  }
-}
-
+$xs: 600px;
+$sm: 900px;
+$md: 1240px;
+$lg: 1440px;
+$xl: 1920px;
 .atmosphere-catering {
   font-family: "Roboto", sans-serif;
   &__header {
@@ -179,10 +201,10 @@ const rightNavLinks = ref([
     justify-content: center;
     align-items: center;
 
-    @include respond-to(small) {
+    @media (max-width: $xs) {
       display: none;
     }
-    @include respond-to(medium) {
+    @media (min-width: $xs) and (max-width: $sm) {
       display: none;
     }
   }
@@ -194,29 +216,33 @@ const rightNavLinks = ref([
     transition: color 0.3s ease;
     text-transform: uppercase;
     cursor: pointer;
+
     &:hover {
       color: rgba(255, 255, 255, 1);
     }
   }
   &__hero {
-    width: 100vw;
-    background:
+    width: 100%;
+    background-image:
       linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.85)),
-      url("https://res.cloudinary.com/eddieebeling/image/upload/v1744216764/catering_fqo33b.png")
-        no-repeat center center;
+      url("https://res.cloudinary.com/eddieebeling/image/upload/v1744216764/catering_fqo33b.png");
     background-size: cover;
-    @include respond-to(small) {
-      min-height: 300px;
+    background-position: center center;
+    @media (max-width: $xs) {
+      padding: 25% 0;
     }
-    @include respond-to(medium) {
-      min-height: 360px;
+    @media (min-width: $xs) and (max-width: $sm) {
+      padding: 20% 0;
     }
-    @include respond-to(large) {
-      min-height: 380px;
+    @media (min-width: $sm) and (max-width: $md) {
+      padding: 20% 0;
+    }
+    @media (min-width: $md) and (max-width: $lg) {
+      padding: 15% 0;
       background-attachment: fixed;
     }
-    @include respond-to(xlarge) {
-      min-height: 400px;
+    @media (min-width: $lg) {
+      padding: 15% 0;
       background-attachment: fixed;
     }
   }
@@ -231,19 +257,19 @@ const rightNavLinks = ref([
     text-align: center;
     margin: 0;
 
-    @include respond-to(small) {
+    @media (max-width: $xs) {
       font-size: 3rem;
       max-width: 80%;
     }
-    @include respond-to(medium) {
+    @media (min-width: $xs) and (max-width: $sm) {
       max-width: 85%;
       font-size: 3.75rem;
     }
-    @include respond-to(large) {
+    @media (min-width: $sm) and (max-width: $md) {
       max-width: 65%;
       font-size: 4rem;
     }
-    @include respond-to(xlarge) {
+    @media (min-width: $md) {
       max-width: 45%;
       font-size: 5rem;
     }
@@ -265,15 +291,25 @@ const rightNavLinks = ref([
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 2rem;
+    line-height: 1;
+    font-family: "Libre Caslon Display", serif;
+    font-weight: 400;
+    text-align: center;
+    max-width: $md;
+    text-align: left;
+    padding: 3rem;
 
-    @include respond-to(large) {
+    @media (min-width: $sm) and (max-width: $md) {
       grid-template-columns: 1fr 1fr;
       grid-gap: 4rem;
       &.image-right {
         direction: rtl;
       }
     }
-    @include respond-to(xlarge) {
+    @media (min-width: $md) {
+      padding: 3rem 0;
       grid-template-columns: 1fr 1fr;
       grid-gap: 6rem;
       &.image-right {
@@ -281,31 +317,16 @@ const rightNavLinks = ref([
       }
     }
 
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 2rem;
-    line-height: 1;
-    font-family: "Libre Caslon Display", serif;
-    font-weight: 400;
-    text-align: center;
-    max-width: 1240px;
-    text-align: left;
-    padding: 3rem;
-
-    @include respond-to(xlarge) {
-      padding: 3rem 0;
-    }
-
     h2 {
-      font-family: "Roboto", sans-serif;
       font-family: "Libre Caslon Display", serif;
       font-size: 3rem;
       font-weight: 300;
       margin: 1.5rem 0;
       padding: 0;
-      @include respond-to(small) {
+      @media (max-width: $xs) {
         font-size: 2.25rem;
       }
-      @include respond-to(medium) {
+      @media (min-width: $xs) and (max-width: $sm) {
         font-size: 2.5rem;
       }
     }
@@ -315,10 +336,10 @@ const rightNavLinks = ref([
       line-height: 1.4;
       font-weight: 300;
       margin: 0 0 1rem 0;
-      @include respond-to(small) {
+      @media (max-width: $xs) {
         font-size: 1.125rem;
       }
-      @include respond-to(medium) {
+      @media (min-width: $xs) and (max-width: $sm) {
         font-size: 1.125rem;
       }
     }
@@ -338,23 +359,152 @@ const rightNavLinks = ref([
       background-size: cover;
       min-height: 300px;
 
-      @include respond-to(medium) {
+      @media (min-width: $xs) and (max-width: $sm) {
         min-height: 420px;
       }
-      @include respond-to(large) {
+      @media (min-width: $sm) and (max-width: $md) {
         min-height: 480px;
       }
-      @include respond-to(xlarge) {
+      @media (min-width: $md) {
         min-height: 520px;
       }
     }
   }
   &__menus {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     color: rgba(255, 255, 255, 0.85);
     min-height: 300px;
+    padding: 3rem;
+
+    > h2 {
+      font-family: "Libre Caslon Display", serif;
+      font-size: 3rem;
+      font-weight: 300;
+      margin: 1.5rem 0;
+      padding: 0;
+      text-align: center;
+      @media (max-width: $xs) {
+        font-size: 2.25rem;
+      }
+      @media (min-width: $xs) and (max-width: $sm) {
+        font-size: 2.5rem;
+      }
+    }
+    > p {
+      font-family: "Roboto", sans-serif;
+      font-size: 1.5rem;
+      line-height: 1.5;
+      font-weight: 300;
+      margin: 0 0 1rem 0;
+      text-align: center;
+      max-width: 1100px;
+      @media (max-width: $xs) {
+        font-size: 1.125rem;
+      }
+      @media (min-width: $xs) and (max-width: $sm) {
+        font-size: 1.25rem;
+      }
+    }
+    button {
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+      cursor: pointer;
+      border: solid 2px rgba(177, 116, 63, 1);
+      background: transparent;
+      color: rgba(177, 116, 63, 1);
+      font-size: 0.9375rem;
+      border-radius: 0.425rem;
+      padding: 0.8125rem 1rem;
+      text-transform: uppercase;
+      width: 100%;
+      max-width: 200px;
+      margin: 2rem auto;
+    }
+  }
+  &__menu-card-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: $md;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+
+    @media (max-width: $xs) {
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+  }
+  &__menu-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.8125rem;
+    padding: 2rem 2.5rem;
+    width: 100%;
+    max-width: 280px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, #2a2a2a, #1f1f1f);
+
+    &:nth-child(2n) {
+      transform: scale(1.1);
+      max-width: 260px;
+    }
+
+    label {
+      font-family: "Roboto", sans-serif;
+      color: rgba(177, 116, 63, 1);
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 0;
+      text-transform: uppercase;
+      text-align: left;
+      margin-bottom: .5rem;
+      @media (max-width: $xs) {
+        font-size: 1.5rem;
+      }
+      @media (min-width: $xs) and (max-width: $sm) {
+        font-size: 1.75rem;
+      }
+    }
+    strong {
+      font-family: "Libre Caslon Display", serif;
+      font-size: 2.75rem;
+      font-weight: 300;
+      margin: 0.5rem 0;
+      line-height: 1;
+    }
+    sup {
+      font-size: 1.75rem;
+      vertical-align: super;
+    }
+    span {
+      font-size: 1.5rem;
+    }
+    p {
+      font-family: "Roboto", sans-serif;
+      line-height: 1.4;
+      font-weight: 300;
+      margin: 0 0 .5rem 0;
+      @media (max-width: $xs) {
+        font-size: 1.125rem;
+      }
+      @media (min-width: $xs) and (max-width: $sm) {
+        font-size: 1.125rem;
+      }
+    }
+    ul {
+      font-family: "Roboto", sans-serif;
+      font-size: .9375rem;
+      list-style-type: disc;
+      margin: 0;
+      padding: 0 0 0 1rem;
+
+      li {
+        text-align: left;
+        padding: .25rem 0
+      }
+    }
   }
   &__pricing {
     display: flex;
@@ -379,7 +529,7 @@ const rightNavLinks = ref([
     border-top: solid 1px rgba(177, 116, 63, 0.5);
     padding: 1rem 0 3rem;
     width: 100%;
-    max-width: 1240px;
+    max-width: $md;
   }
 }
 </style>
