@@ -376,6 +376,9 @@ $xl: 1920px;
     color: rgba(255, 255, 255, 0.85);
     min-height: 300px;
     padding: 3rem;
+    margin-top: 3rem;
+    border-top: solid 1px rgba(177, 116, 63, 0.5);
+    border-bottom: solid 1px rgba(177, 116, 63, 0.5);
 
     > h2 {
       font-family: "Libre Caslon Display", serif;
