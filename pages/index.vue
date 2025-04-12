@@ -462,7 +462,7 @@ $xl: 1920px;
       padding: 0;
       text-transform: uppercase;
       text-align: left;
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
       @media (max-width: $xs) {
         font-size: 1.5rem;
       }
@@ -488,7 +488,7 @@ $xl: 1920px;
       font-family: "Roboto", sans-serif;
       line-height: 1.4;
       font-weight: 300;
-      margin: 0 0 .5rem 0;
+      margin: 0 0 0.5rem 0;
       @media (max-width: $xs) {
         font-size: 1.125rem;
       }
@@ -498,14 +498,14 @@ $xl: 1920px;
     }
     ul {
       font-family: "Roboto", sans-serif;
-      font-size: .9375rem;
+      font-size: 0.9375rem;
       list-style-type: disc;
       margin: 0;
       padding: 0 0 0 1rem;
 
       li {
         text-align: left;
-        padding: .25rem 0
+        padding: 0.25rem 0;
       }
     }
   }
