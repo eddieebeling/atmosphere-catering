@@ -131,10 +131,9 @@
   <div id="contact" class="atmosphere-catering__contact">
     <h2>Let's chat...</h2>
     <form
-      method="POST"
-      action="/"
-      data-netlify="true"
       name="contact"
+      method="POST"
+      data-netlify="true"
       class="atmosphere-catering__form"
     >
       <label for="name" class="atmosphere-catering__form--label">
