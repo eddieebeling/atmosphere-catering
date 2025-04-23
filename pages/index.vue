@@ -133,7 +133,7 @@
     <form
       name="contact"
       method="POST"
-      netlify
+      data-netlify="true"
       class="atmosphere-catering__form"
     >
       <label for="name" class="atmosphere-catering__form--label">
