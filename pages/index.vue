@@ -119,7 +119,6 @@
     </div>
 
     <form name="lead" class="atmosphere-catering__form" netlify>
-      <input type="hidden" name="form-name" value="lead" />
       <label for="name" class="atmosphere-catering__form--label">
         <span>Name</span>
         <input type="text" id="name" name="name" autocomplete="name" required />
