@@ -445,7 +445,7 @@ $xl: 1920px;
   &__contact {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     color: rgba(255, 255, 255, 0.85);
     min-height: 300px;
     width: 100%;
