@@ -15,7 +15,7 @@
   <div id="catering" class="atmosphere-catering__side-by-side image-right">
     <div class="atmosphere-catering__side-by-side--image">
       <img
-        src="https://res.cloudinary.com/eddieebeling/image/upload/v1745322748/CORP_CATERING-Opt2_or_TESTIMONIALS_Dr_qapgtx.jpg"
+        src="https://res.cloudinary.com/eddieebeling/image/upload/w_1000/v1745322748/CORP_CATERING-Opt2_or_TESTIMONIALS_Dr_qapgtx.jpg"
         alt="Coporate Catering and Luncheons" style="
           width: 100%;
           height: 100%;
@@ -45,7 +45,7 @@
   </div>
   <div id="parties" class="atmosphere-catering__side-by-side image-left">
     <div class="atmosphere-catering__side-by-side--image">
-      <img src="https://res.cloudinary.com/eddieebeling/image/upload/v1745322759/Cheers_plcweb.jpg"
+      <img src="https://res.cloudinary.com/eddieebeling/image/upload/w_1000/v1745322759/Cheers_plcweb.jpg"
         alt="Private Dining and Intimate Parties" style="
           width: 100%;
           height: 100%;
@@ -79,7 +79,7 @@
   <div id="events" class="atmosphere-catering__side-by-side image-right">
     <div class="atmosphere-catering__side-by-side--image">
       <img
-        src="https://res.cloudinary.com/eddieebeling/image/upload/v1745322743/EVENTS_CELEBRATION_BrunchParty1_othyfq.jpg"
+        src="https://res.cloudinary.com/eddieebeling/image/upload/w_1000/v1745322743/EVENTS_CELEBRATION_BrunchParty1_othyfq.jpg"
         alt="Events and Celebrations" style="
           width: 100%;
           height: 100%;
@@ -116,6 +116,9 @@
         Email: <a href="mailto:chef@atmocatering.com">chef@atmocatering.com</a><br />
         Phone: <a href="tel:619-757-0480">619.757.0480</a>
       </p>
+      <a href="https://www.instagram.com/roux_boy/" target="_blank" class="atmosphere-catering__profile-pic">
+        <img src="https://res.cloudinary.com/eddieebeling/image/upload/w_400/v1745430144/16124205_1840922989518177_2606415304602943488_a_pdlovt.jpg" alt="Chef Justin" width="260" />
+      </a>
     </div>
 
     <form name="lead" class="atmosphere-catering__form" netlify>
@@ -267,7 +270,7 @@ $xl: 1920px;
     width: 100%;
     background-image:
       linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.85)),
-      url("https://res.cloudinary.com/eddieebeling/image/upload/v1745322713/shutterstock_775458475_jmuuj2.jpg");
+      url("https://res.cloudinary.com/eddieebeling/image/upload/w_1920/v1745322713/shutterstock_775458475_jmuuj2.jpg");
     background-size: cover;
     background-position: center center;
 
@@ -611,6 +614,18 @@ $xl: 1920px;
       svg {
         transform: scale(1.1);
       }
+    }
+  }
+
+  &__profile-pic {
+    padding: 2rem 0;
+    display: block;
+    img {
+      width: 180px;
+      border-radius: 100%;
+      object-fit: cover;
+      border: solid 4px transparent;
+      outline: solid 4px rgb(225, 49, 124);
     }
   }
 }
