@@ -129,7 +129,19 @@
   </div>
   <div id="menus" class="atmosphere-catering__contact">MENU CONTENT</div>
   <div id="contact" class="atmosphere-catering__contact">
-    <h2>Let's chat...</h2>
+    <div class="atmosphere-catering__contact-content">
+      <h2>Let's chat...</h2>
+      <p>
+        Call or email today for more information and to schedule your event, and
+        let's get creative together!
+      </p>
+      <p>
+        Email: <a href="mailto:chef@atmocatering.com">chef@atmocatering.com</a
+        ><br />
+        Phone: <a href="tel:619-757-0480">619.757.0480</a>
+      </p>
+    </div>
+
     <form
       name="lead"
       method="POST"
@@ -259,23 +271,28 @@ $sm: 900px;
 $md: 1240px;
 $lg: 1440px;
 $xl: 1920px;
+
 .atmosphere-catering {
   font-family: "Roboto", sans-serif;
+
   &__header {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   &__logo {
     width: 130px;
     height: auto;
     margin: 1.5rem 3rem;
     cursor: pointer;
   }
+
   &__title {
     font-size: 2rem;
     text-align: center;
   }
+
   &__nav {
     display: flex;
     justify-content: center;
@@ -284,10 +301,12 @@ $xl: 1920px;
     @media (max-width: $xs) {
       display: none;
     }
+
     @media (min-width: $xs) and (max-width: $sm) {
       display: none;
     }
   }
+
   &__link {
     color: rgba(255, 255, 255, 0.65);
     text-decoration: none;
@@ -301,6 +320,7 @@ $xl: 1920px;
       color: rgba(255, 255, 255, 1);
     }
   }
+
   &__hero {
     width: 100%;
     background-image:
@@ -308,24 +328,30 @@ $xl: 1920px;
       url("https://res.cloudinary.com/eddieebeling/image/upload/v1745322713/shutterstock_775458475_jmuuj2.jpg");
     background-size: cover;
     background-position: center center;
+
     @media (max-width: $xs) {
       padding: 25% 0;
     }
+
     @media (min-width: $xs) and (max-width: $sm) {
       padding: 20% 0;
     }
+
     @media (min-width: $sm) and (max-width: $md) {
       padding: 20% 0;
     }
+
     @media (min-width: $md) and (max-width: $lg) {
       padding: 15% 0;
       background-attachment: fixed;
     }
+
     @media (min-width: $lg) {
       padding: 15% 0;
       background-attachment: fixed;
     }
   }
+
   &__intro {
     padding: 8% 4% 6% 4%;
     color: rgba(255, 255, 255, 0.85);
@@ -341,14 +367,17 @@ $xl: 1920px;
       font-size: 3rem;
       max-width: 80%;
     }
+
     @media (min-width: $xs) and (max-width: $sm) {
       max-width: 85%;
       font-size: 3.75rem;
     }
+
     @media (min-width: $sm) and (max-width: $md) {
       max-width: 65%;
       font-size: 3rem;
     }
+
     @media (min-width: $md) {
       max-width: 80%;
       font-size: 4.5rem;
@@ -369,6 +398,7 @@ $xl: 1920px;
       margin: 2.5rem auto;
     }
   }
+
   &__side-by-side {
     display: grid;
     grid-template-columns: 1fr;
@@ -386,14 +416,17 @@ $xl: 1920px;
     @media (min-width: $sm) and (max-width: $md) {
       grid-template-columns: 1fr 1fr;
       grid-gap: 4rem;
+
       &.image-right {
         direction: rtl;
       }
     }
+
     @media (min-width: $md) {
       padding: 3rem 0;
       grid-template-columns: 1fr 1fr;
       grid-gap: 6rem;
+
       &.image-right {
         direction: rtl;
       }
@@ -406,13 +439,16 @@ $xl: 1920px;
       margin: 1.5rem 0;
       padding: 0;
       direction: ltr;
+
       @media (max-width: $xs) {
         font-size: 2.25rem;
       }
+
       @media (min-width: $xs) and (max-width: $sm) {
         font-size: 2.5rem;
       }
     }
+
     p {
       font-family: "Roboto", sans-serif;
       font-size: 1.25rem;
@@ -420,9 +456,11 @@ $xl: 1920px;
       font-weight: 300;
       margin: 0 0 1rem 0;
       direction: ltr;
+
       @media (max-width: $xs) {
         font-size: 1.125rem;
       }
+
       @media (min-width: $xs) and (max-width: $sm) {
         font-size: 1.125rem;
       }
@@ -431,11 +469,13 @@ $xl: 1920px;
     span {
       font-style: italic;
     }
+
     &--content {
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
+
     &--image {
       height: 100%;
       background: #2a2a2a;
@@ -446,45 +486,84 @@ $xl: 1920px;
       @media (min-width: $xs) and (max-width: $sm) {
         min-height: 420px;
       }
+
       @media (min-width: $sm) and (max-width: $md) {
         min-height: 480px;
       }
+
       @media (min-width: $md) {
         min-height: 520px;
       }
     }
   }
+
   &__contact {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     color: rgba(255, 255, 255, 0.85);
     min-height: 300px;
-    padding: 2% 4% 8% 4%;
+    width: 100%;
+    max-width: 1240px;
+    padding: 3rem;
+
+    @media (min-width: $sm) and (max-width: $md) {
+      flex-direction: row;
+      paddding: 3rem 0;
+    }
+    @media (min-width: $md) {
+      flex-direction: row;
+      paddding: 3rem 0;
+    }
+    @media (min-width: $lg) {
+      flex-direction: row;
+      padding: 3rem 0;
+    }
+
     h2 {
       font-family: "Libre Caslon Display", serif;
       font-size: 2.75rem;
       font-weight: 300;
-      margin: 1.5rem 0;
+      margin: 0.5rem 0 1.5rem 0;
       padding: 0;
       direction: ltr;
+
       @media (max-width: $xs) {
         font-size: 2.25rem;
       }
+
       @media (min-width: $xs) and (max-width: $sm) {
         font-size: 2.5rem;
       }
     }
 
-    form {
-      display: flex;
-      flex-direction: column;
+    p {
+      font-size: 1.25rem;
+      line-height: 1.5;
+    }
+
+    a {
+      color: rgba(177, 116, 63, 0.8);
+      text-decoration: none;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: rgba(177, 116, 63, 0.9);
+      }
     }
   }
+
+  &__contact-content {
+    width: 100%;
+    padding-right: 6%;
+  }
+
   &__form {
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     button[type="submit"] {
       font-family: "Roboto", sans-serif;
@@ -506,10 +585,10 @@ $xl: 1920px;
       }
     }
   }
+
   &__form--label {
     padding: 0.8125rem 0;
     font-size: 1.125rem;
-    min-width: 400px;
 
     span {
       display: block;
@@ -538,10 +617,12 @@ $xl: 1920px;
         box-shadow: 0 0 0 2px rgba(177, 116, 63, 0.5);
       }
     }
+
     textarea {
       height: 140px;
     }
   }
+
   &__footer {
     font-size: 0.8125rem;
     display: flex;
@@ -553,6 +634,7 @@ $xl: 1920px;
     width: 100%;
     max-width: $md;
   }
+
   &__social {
     display: flex;
     flex-direction: row;
@@ -561,16 +643,19 @@ $xl: 1920px;
     list-style: none;
     margin: 0;
     transition: all 0.2s ease-in-out;
+
     svg {
       height: 20px;
       width: 20px;
     }
   }
+
   &__social--item {
     margin: 0 0 0 1rem;
     padding: 0;
     cursor: pointer;
   }
+
   &__social--link {
     color: rgba(255, 255, 255, 0.5);
     font-size: 1.5rem;

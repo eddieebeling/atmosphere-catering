@@ -12,6 +12,9 @@
 html {
   box-sizing: border-box;
 }
+* {
+  box-sizing: inherit;
+}
 body {
   margin: 0;
   padding: 0;
