@@ -131,7 +131,7 @@
   <div id="contact" class="atmosphere-catering__contact">
     <h2>Let's chat...</h2>
     <form
-      name="contact"
+      name="lead"
       method="POST"
       data-netlify="true"
       class="atmosphere-catering__form"
@@ -139,16 +139,6 @@
       <label for="name" class="atmosphere-catering__form--label">
         <span>Name</span>
         <input type="text" id="name" name="name" autocomplete="name" required />
-      </label>
-      <label for="email" class="atmosphere-catering__form--label">
-        <span>Email</span>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          autocomplete="email"
-          required
-        />
       </label>
       <label for="phone" class="atmosphere-catering__form--label">
         <span>Phone</span>
@@ -160,8 +150,18 @@
           required
         />
       </label>
+      <label for="email" class="atmosphere-catering__form--label">
+        <span>Email</span>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          autocomplete="email"
+          required
+        />
+      </label>
       <label for="message" class="atmosphere-catering__form--label">
-        <span>Message</span>
+        <span>Event Details</span>
         <textarea id="message" name="message" required></textarea>
       </label>
       <div>
