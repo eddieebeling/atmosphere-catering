@@ -1,13 +1,29 @@
 <template>
   <div class="atmosphere-catering__header">
     <nav class="atmosphere-catering__nav">
-      <a v-for="(item, index) in leftNavLinks" :key="index" @click="scrollTo(item.anchor)"
-        class="atmosphere-catering__link">{{ item.text }}</a>
+      <a
+        v-for="(item, index) in leftNavLinks"
+        :key="index"
+        @click="scrollTo(item.anchor)"
+        class="atmosphere-catering__link"
+        >{{ item.text }}</a
+      >
     </nav>
-    <img :src="logoUrl" :alt="title" @click="scrollToTop" class="atmosphere-catering__logo" />
+    <img
+      :src="logoUrl"
+      :alt="title"
+      @click="scrollToTop"
+      class="atmosphere-catering__logo"
+    />
     <nav class="atmosphere-catering__nav">
-      <a v-for="(item, index) in rightNavLinks" :href="item.url" :key="index" @click="scrollTo(item.anchor)"
-        class="atmosphere-catering__link">{{ item.text }}</a>
+      <a
+        v-for="(item, index) in rightNavLinks"
+        :href="item.url"
+        :key="index"
+        @click="scrollTo(item.anchor)"
+        class="atmosphere-catering__link"
+        >{{ item.text }}</a
+      >
     </nav>
   </div>
   <div class="atmosphere-catering__hero"></div>
@@ -16,12 +32,8 @@
     <div class="atmosphere-catering__side-by-side--image">
       <img
         src="https://res.cloudinary.com/eddieebeling/image/upload/w_1000/v1745322748/CORP_CATERING-Opt2_or_TESTIMONIALS_Dr_qapgtx.jpg"
-        alt="Coporate Catering and Luncheons" style="
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
-        " />
+        alt="Coporate Catering and Luncheons"
+      />
     </div>
     <div class="atmosphere-catering__side-by-side--content">
       <h2>Corporate Catering</h2>
@@ -45,13 +57,10 @@
   </div>
   <div id="parties" class="atmosphere-catering__side-by-side image-left">
     <div class="atmosphere-catering__side-by-side--image">
-      <img src="https://res.cloudinary.com/eddieebeling/image/upload/w_1000/v1745322759/Cheers_plcweb.jpg"
-        alt="Private Dining and Intimate Parties" style="
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
-        " />
+      <img
+        src="https://res.cloudinary.com/eddieebeling/image/upload/w_1000/v1745322759/Cheers_plcweb.jpg"
+        alt="Private Dining and Intimate Parties"
+      />
     </div>
     <div class="atmosphere-catering__side-by-side--content">
       <h2>Private Dining &plus; Intimate Parties</h2>
@@ -80,12 +89,8 @@
     <div class="atmosphere-catering__side-by-side--image">
       <img
         src="https://res.cloudinary.com/eddieebeling/image/upload/w_1000/v1745322743/EVENTS_CELEBRATION_BrunchParty1_othyfq.jpg"
-        alt="Events and Celebrations" style="
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
-        " />
+        alt="Events and Celebrations"
+      />
     </div>
     <div class="atmosphere-catering__side-by-side--content">
       <h2>Events &plus; Celebrations</h2>
@@ -101,10 +106,20 @@
       </p>
     </div>
   </div>
-  <div id="testimonials" class="atmosphere-catering__contact">
+  <div
+    id="testimonials"
+    class="atmosphere-catering__contact"
+    style="justify-content: center"
+  >
     TESTIMONIAL CONTENT
   </div>
-  <div id="menus" class="atmosphere-catering__contact">MENU CONTENT</div>
+  <div
+    id="menus"
+    class="atmosphere-catering__contact"
+    style="justify-content: center"
+  >
+    MENU CONTENT
+  </div>
   <div id="contact" class="atmosphere-catering__contact">
     <div class="atmosphere-catering__contact-content">
       <h2>Let's chat...</h2>
@@ -113,26 +128,52 @@
         let's get creative together!
       </p>
       <p>
-        Email: <a href="mailto:chef@atmocatering.com">chef@atmocatering.com</a><br />
+        Email: <a href="mailto:chef@atmocatering.com">chef@atmocatering.com</a
+        ><br />
         Phone: <a href="tel:619-757-0480">619.757.0480</a>
       </p>
-      <a href="https://www.instagram.com/roux_boy/" target="_blank" class="atmosphere-catering__profile-pic">
-        <img src="https://res.cloudinary.com/eddieebeling/image/upload/w_400/v1745430144/16124205_1840922989518177_2606415304602943488_a_pdlovt.jpg" alt="Chef Justin" width="260" />
+      <a
+        href="https://www.instagram.com/roux_boy/"
+        target="_blank"
+        class="atmosphere-catering__profile-pic"
+      >
+        <img
+          src="https://res.cloudinary.com/eddieebeling/image/upload/w_400/v1745430144/16124205_1840922989518177_2606415304602943488_a_pdlovt.jpg"
+          alt="Chef Justin"
+          width="260"
+        />
       </a>
     </div>
 
-    <form name="lead" class="atmosphere-catering__form" netlify>
+    <form
+      name="lead"
+      action="/thank-you"
+      class="atmosphere-catering__form"
+      netlify
+    >
       <label for="name" class="atmosphere-catering__form--label">
         <span>Name</span>
         <input type="text" id="name" name="name" autocomplete="name" required />
       </label>
       <label for="phone" class="atmosphere-catering__form--label">
         <span>Phone</span>
-        <input type="phone" id="phone" name="phone" autocomplete="phone" required />
+        <input
+          type="phone"
+          id="phone"
+          name="phone"
+          autocomplete="phone"
+          required
+        />
       </label>
       <label for="email" class="atmosphere-catering__form--label">
         <span>Email</span>
-        <input type="email" id="email" name="email" autocomplete="email" required />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          autocomplete="email"
+          required
+        />
       </label>
       <label for="message" class="atmosphere-catering__form--label">
         <span>Event Details</span>
@@ -144,32 +185,49 @@
     </form>
   </div>
   <div id="footer" class="atmosphere-catering__footer">
-    <span>Copyright &copy; {{ currentYear }} Atmosphere Catering - All Rights
-      Reserved.</span>
+    <span
+      >Copyright &copy; {{ currentYear }} Atmosphere Catering - All Rights
+      Reserved.</span
+    >
     <ul id="social" class="atmosphere-catering__social">
       <li class="atmosphere-catering__social--item">
-        <a href="https://www.instagram.com/atmospherecatering/" target="_blank" rel="noopener noreferrer"
-          class="atmosphere-catering__social--link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <a
+          href="https://www.instagram.com/atmospherecatering/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="atmosphere-catering__social--link"
+          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
             <path
               d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-              fill="currentColor" />
-          </svg></a>
+              fill="currentColor"
+            /></svg
+        ></a>
       </li>
       <li class="atmosphere-catering__social--item">
-        <a href="https://www.facebook.com/atmocatering/" target="_blank" rel="noopener noreferrer"
-          class="atmosphere-catering__social--link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+        <a
+          href="https://www.facebook.com/atmocatering/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="atmosphere-catering__social--link"
+          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
             <path
               d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
-              fill="currentColor" />
-          </svg></a>
+              fill="currentColor"
+            /></svg
+        ></a>
       </li>
       <li class="atmosphere-catering__social--item">
-        <a href="https://www.linkedin.com/company/atmosphere-catering/" target="_blank" rel="noopener noreferrer"
-          class="atmosphere-catering__social--link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <a
+          href="https://www.linkedin.com/company/atmosphere-catering/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="atmosphere-catering__social--link"
+          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
             <path
               d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"
-              fill="currentColor" />
-          </svg></a>
+              fill="currentColor"
+            /></svg
+        ></a>
       </li>
     </ul>
   </div>
@@ -357,6 +415,13 @@ $xl: 1920px;
     max-width: $md;
     text-align: left;
     padding: 3rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
 
     @media (min-width: $sm) and (max-width: $md) {
       grid-template-columns: 1fr 1fr;
@@ -619,13 +684,13 @@ $xl: 1920px;
 
   &__profile-pic {
     padding: 2rem 0;
-    display: block;
+    display: inline-block;
     img {
       width: 180px;
       border-radius: 100%;
       object-fit: cover;
-      border: solid 4px transparent;
-      outline: solid 4px rgb(225, 49, 124);
+      border: solid 6px transparent;
+      outline: solid 3px rgb(225, 49, 124);
     }
   }
 }
