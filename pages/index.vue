@@ -638,7 +638,9 @@ $xl: 1920px;
       }
 
       ul li {
+        padding: .0125rem 0;
         padding-left: .8125rem;
+        font-size: 1rem;
 
         &::before {
           content: "•";
