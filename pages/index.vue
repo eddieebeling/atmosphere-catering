@@ -608,7 +608,7 @@ $xl: 1920px;
       justify-content: flex-end;
       border: none;
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.85)),
-      url('https://res.cloudinary.com/eddieebeling/image/upload/v1745322730/Huli_k78sc4.jpg');
+      url('https://res.cloudinary.com/eddieebeling/image/upload/h_800/v1745322730/Huli_k78sc4.jpg');
       background-size: cover;
     }
 
