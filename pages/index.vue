@@ -14,7 +14,7 @@
   <h1 class="atmosphere-catering__intro" v-html="intro"></h1>
   <div id="catering" class="atmosphere-catering__side-by-side image-right">
     <div class="atmosphere-catering__side-by-side--image">
-      <img src="https://res.cloudinary.com/eddieebeling/image/upload/w_1000/v1744225093/greek2_fkmxti.jpg"
+      <img src="https://res.cloudinary.com/eddieebeling/image/upload/w_1000/v1745322751/CORP_CATERING_Opt1Wok_wdidwj.jpg"
         alt="Coporate Catering and Luncheons" />
     </div>
     <div class="atmosphere-catering__side-by-side--content">
@@ -122,8 +122,7 @@
   </div>
   <div id="menus" class="atmosphere-catering__menus">
     <div class="atmosphere-catering__menu-card">
-      <h2>Corporate Catering Menus</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+      <h2>Event &amp; Corporate Catering Menus</h2>
     </div>
     <div class="atmosphere-catering__menu-card">
       <h3>Mediterranean</h3>
@@ -604,8 +603,13 @@ $xl: 1920px;
     border: solid 1px rgba(177, 116, 63, 0.5);
 
     &:first-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
       border: none;
-      padding-left: 0;
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.85)),
+      url('https://res.cloudinary.com/eddieebeling/image/upload/v1745322730/Huli_k78sc4.jpg');
+      background-size: cover;
     }
 
     h2 {
