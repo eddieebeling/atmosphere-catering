@@ -134,11 +134,6 @@
         Email: <a href="mailto:chef@atmocatering.com">chef@atmocatering.com</a><br />
         Phone: <a href="tel:619-757-0480">619.757.0480</a>
       </p>
-      <a href="https://www.instagram.com/roux_boy/" target="_blank" class="atmosphere-catering__profile-pic">
-        <img
-          src="https://res.cloudinary.com/eddieebeling/image/upload/w_400/v1745430144/16124205_1840922989518177_2606415304602943488_a_pdlovt.jpg"
-          alt="Chef Justin" width="260" />
-      </a>
     </div>
 
     <form name="lead" action="/thank-you" class="atmosphere-catering__form" netlify>
@@ -560,7 +555,7 @@ $xl: 1920px;
   &__contact {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     color: rgba(255, 255, 255, 0.85);
     min-height: 300px;
     width: 100%;
@@ -569,12 +564,12 @@ $xl: 1920px;
 
     @media (min-width: $sm) and (max-width: $md) {
       flex-direction: row;
-      paddding: 3rem 0 5rem;
+      padding: 3rem 0 5rem;
     }
 
     @media (min-width: $md) {
       flex-direction: row;
-      paddding: 3rem 0 5rem;
+      padding: 3rem 0 5rem;
     }
 
     @media (min-width: $lg) {
@@ -586,7 +581,7 @@ $xl: 1920px;
       font-family: "Libre Caslon Display", serif;
       font-size: 2.75rem;
       font-weight: 300;
-      margin: 0.5rem 0 1.5rem 0;
+      margin: 2.5rem 0 1.5rem 0;
       padding: 0;
       direction: ltr;
       max-width: 70%;

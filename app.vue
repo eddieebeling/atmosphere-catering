@@ -4,6 +4,19 @@
   </div>
 </template>
 
+<script setup>
+useHead({
+  title: 'Atmosphere Catering - Chef-driven catering for the tastefully refined',
+  meta: [
+    { name: 'description', content: 'Elevate your atmosphere. Chef-driven catering for the tastefully refined.' },
+    { name: 'keywords', content: 'Professional Catering for Parties, Events, Celebrations, and Private Dining in Metro Phoenix, Mesa, Tempe, Chandler, Gilbert, and Scottsdale, Arizona.' }
+  ],
+  bodyAttrs: {
+    class: 'dark-theme'
+  }
+})
+</script>
+
 <style lang="scss">
 @import url("animate.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
