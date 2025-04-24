@@ -85,7 +85,7 @@
       </p>
     </div>
   </div>
-  <div id="testimonials" class="atmosphere-catering__testimonials" style="justify-content: center">
+  <div id="testimonials" class="atmosphere-catering__testimonials">
     <!-- <h2>Don’t take our word for it, check out what our happy customers have to say!</h2> -->
     <div class="atmosphere-catering__testimonial-content">
       <template v-for="(item, index) in testimonials" :key="index">
@@ -120,8 +120,76 @@
       </template>
     </div>
   </div>
-  <div id="menus" class="atmosphere-catering__contact" style="justify-content: center">
-    MENU CONTENT
+  <div id="menus" class="atmosphere-catering__menus">
+    <div class="atmosphere-catering__menu-card">
+      <h2>Corporate Catering Menus</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    </div>
+    <div class="atmosphere-catering__menu-card">
+      <h3>Mediterranean</h3>
+      <ul>
+        <li>Grilled Lemon Vin Chicken Breast</li>
+        <li>Fire Roasted Vegetables</li>
+        <li>Greek Salad with Feta</li>
+        <li>Organic Hummus & Pita</li>
+        <li>Meraki Fruit Plate</li>
+        <li>Pickled Red Onion & Tzatziki</li>
+      </ul>
+    </div>
+    <div class="atmosphere-catering__menu-card">
+      <h3>Hawaiian BBQ</h3>
+      <ul>
+        <li>Huli Huli Chicken</li>
+        <li>Grilled Pineapple</li>
+        <li>Coconut Jasmine Rice</li>
+        <li>Chef J's Famous Island Mac Salad</li>
+        <li>Ohana Green Salad</li>
+        <li>Asian Sesame Ginger Dressing</li>
+        <li>Aloha Fruit Plate</li>
+        <li>Decadent Malasadas (Upon request)</li>
+      </ul>
+    </div>
+    <div class="atmosphere-catering__menu-card">
+      <h3>Southwestern</h3>
+      <ul>
+        <li>Sazón/Citrus Grilled Chicken</li>
+        <li>Sautéed Fajita Vegetables</li>
+        <li>Charred Corn Salad</li>
+        <li>Cilantro Lime Dressing</li>
+        <li>Spanish Rice</li>
+        <li>Yucatán Black Beans</li>
+        <li>Salsa/Sour Cream/Griddled Tortillas</li>
+      </ul>
+    </div>
+    <div class="atmosphere-catering__menu-card">
+      <h3>Hand-Crafted Sandwiches + Salad</h3>
+      <ul>
+        <li>Locally Sourced Breads &amp; Rolls</li>
+        <li>Choice of:
+          <ul>
+            <li>Succulent Turkey Breast</li>
+            <li>House Carved Roast Beef</li>
+            <li>Italian Cured Meats</li>
+          </ul>
+        </li>
+        <li>Various Cheeses</li>
+        <li>Lettuce/Tomato/Pickled Red Onions</li>
+        <li>Gourmet Condiments</li>
+        <li>Fresh Fruit</li>
+        <li>Spinach Strawberry Goat Cheese Salad</li>
+      </ul>
+    </div>
+    <div class="atmosphere-catering__menu-card">
+      <h3>Elegant Charcuterie</h3>
+      <ul>
+        <li>Assorted Meats</li>
+        <li>Artisan Cheeses</li>
+        <li>Seasonal Fruits &amp; Pickled Veg</li>
+        <li>Dipping Breads + Crackers</li>
+        <li>Sweet & Savory Spreads</li>
+        <li>Fresh Green Salad</li>
+      </ul>
+    </div>
   </div>
   <div id="contact" class="atmosphere-catering__contact">
     <div class="atmosphere-catering__contact-content">
@@ -498,6 +566,84 @@ $xl: 1920px;
 
       @media (min-width: $md) {
         min-height: 520px;
+      }
+    }
+  }
+
+  &__menus {
+    width: 100%;
+    display: grid;
+    grid-gap: 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 2rem;
+    line-height: 1;
+    font-family: "Libre Caslon Display", serif;
+    padding: 3rem;
+    max-width: 1280px;
+
+    @media (min-width: $sm) {
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+    }
+
+    @media (min-width: $lg) {
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1rem;
+      padding: 3rem 0 5rem;
+    }
+  }
+
+  &__menu-card {
+    font-family: "Roboto", sans-serif;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    padding: 2.5rem 3rem;
+    border: solid 1px rgba(177, 116, 63, 0.5);
+
+    &:first-child {
+      border: none;
+      padding-left: 0;
+    }
+
+    h2 {
+      font-family: "Libre Caslon Display", serif;
+      font-size: 2.5rem;
+      line-height: 1.1;
+      margin: 0 0 1rem 0;
+      color: #fff
+    }
+
+    h3 {
+      font-family: "Libre Caslon Display", serif;
+      font-size: 1.5rem;
+      line-height: 1.1;
+      text-transform: uppercase;
+      margin: 0 0 1rem 0;
+      color: rgba(177, 116, 63, 1);
+
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 1.125rem;
+
+      li {
+        padding: 0.25rem 0;
+        position: relative;
+      }
+
+      ul li {
+        padding-left: .8125rem;
+
+        &::before {
+          content: "•";
+          padding-right: .8125rem;
+        }
       }
     }
   }
