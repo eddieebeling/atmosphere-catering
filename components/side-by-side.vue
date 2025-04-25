@@ -29,7 +29,7 @@ const imageClass = computed(() => {
   color: rgba(255, 255, 255, 0.85);
   font-size: 2rem;
   line-height: 1;
-  font-family: "Libre Caslon Display", serif;
+  @include font-serif;
   font-weight: 400;
   text-align: center;
   max-width: $md;
@@ -63,7 +63,7 @@ const imageClass = computed(() => {
   }
 
   h2 {
-    font-family: "Libre Caslon Display", serif;
+    @include font-serif;
     font-size: 2.75rem;
     font-weight: 300;
     margin: 1.5rem 0;
@@ -80,7 +80,7 @@ const imageClass = computed(() => {
   }
 
   p {
-    font-family: "Roboto", sans-serif;
+    @include font-sans-serif;
     font-size: 1.25rem;
     line-height: 1.5;
     font-weight: 300;
@@ -108,7 +108,7 @@ const imageClass = computed(() => {
 
   &--image {
     height: 100%;
-    background: #2a2a2a;
+    background: rgb(42, 42, 42);
     background-position: center center;
     background-size: cover;
     min-height: 300px;

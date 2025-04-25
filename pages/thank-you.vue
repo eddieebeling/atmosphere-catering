@@ -17,14 +17,15 @@ setTimeout(async () => {
 </script>
 
 <style lang="scss">
+@use "@/assets/scss/variables.scss" as *;
 .thank-you {
-  font-family: "Roboto", sans-serif;
+  @include font-sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  color: #fff;
+  color: rgb(255, 255, 255);
   text-align: center;
 
   h1 {
@@ -32,13 +33,13 @@ setTimeout(async () => {
     font-size: 3.5rem;
     width: 100vw;
     line-height: 1.2;
-    font-family: "Libre Caslon Display", serif;
+    @include font-serif;
     font-weight: 400;
     text-align: center;
     margin: 0;
   }
   p {
-    font-family: "Roboto", sans-serif;
+    @include font-sans-serif;
     font-size: 1.25rem;
     line-height: 1.5;
     font-weight: 300;
