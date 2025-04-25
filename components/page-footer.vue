@@ -38,15 +38,26 @@ const currentYear = ref(new Date().getFullYear());
 @use "@/assets/scss/variables.scss" as *;
 
 .page-footer {
-	font-size: 0.8125rem;
+	font-size: 0.9375rem;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 	color: rgba(255, 255, 255, 0.5);
 	border-top: solid 1px rgba(177, 116, 63, 0.5);
-	padding: 1rem 0 3rem;
+	padding: 2rem;
 	width: 100%;
-	max-width: $md;
+	max-width: $container-max-w;
+
+	@media (min-width: $md) {
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 1.5rem 2rem;
+	}
+	@media (min-width: $lg) {
+		padding: 1.5rem 0 3rem;
+	}
 
 	&__social {
 		display: flex;
@@ -54,19 +65,33 @@ const currentYear = ref(new Date().getFullYear());
 		justify-content: center;
 		align-items: center;
 		list-style: none;
-		margin: 0;
+		margin: 1.25rem 0 0 0;
+		padding: 0;
 		transition: all 0.2s ease-in-out;
 
+		@media (min-width: $md) {
+			margin: 0;
+		}
+
 		svg {
-			height: 20px;
-			width: 20px;
+			height: 24px;
+			width: 24px;
+
+			@media (min-width: $md) {
+				height: 20px;
+				width: 20px;
+			}
 		}
 	}
 
 	&__social--item {
-		margin: 0 0 0 1rem;
+		margin: 0 .5rem;
 		padding: 0;
 		cursor: pointer;
+
+		@media (min-width: $md) {
+			margin: 0 0 0 1rem;
+		}
 	}
 
 	&__social--link {

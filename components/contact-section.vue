@@ -53,7 +53,7 @@ const phone = ref("619-757-0480");
     color: rgba(255, 255, 255, 0.85);
     min-height: 300px;
     width: 100%;
-    max-width: 1240px;
+    max-width: $container-max-w;
     padding: 2rem;
 
     @media (min-width: $sm) and (max-width: $md) {
@@ -62,7 +62,7 @@ const phone = ref("619-757-0480");
 
     @media (min-width: $md) {
         flex-direction: row;
-        padding: 3rem 0 5rem;
+        padding: 3rem 2rem 5rem;
     }
 
     @media (min-width: $lg) {
@@ -71,7 +71,7 @@ const phone = ref("619-757-0480");
     }
 
     h2 {
-        font-family: "Libre Caslon Display", serif;
+        @include font-serif;
         font-size: 2.75rem;
         font-weight: 300;
         margin: 2.5rem 0 1.5rem 0;
@@ -167,10 +167,15 @@ const phone = ref("619-757-0480");
             cursor: pointer;
             margin-top: 1rem;
             transition: all 0.2s ease-in-out;
+            width: 100%;
 
             &:hover {
                 background: rgba(177, 116, 63, 0.9);
                 transform: scale(1.05);
+            }
+
+            @media (min-width: $lg) {
+                width: unset;
             }
         }
     }

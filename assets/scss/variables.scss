@@ -1,8 +1,9 @@
-$xs: 600px;
+$xs: 475px;
 $sm: 900px;
-$md: 1240px;
+$md: 1140px;
 $lg: 1440px;
 $xl: 1920px;
+$container-max-w: 1280px;
 
 @mixin font-serif {
   font-family: "Libre Caslon Display", serif;

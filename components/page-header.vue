@@ -51,7 +51,8 @@ const rightNavLinks = ref([
     &__logo {
         width: 130px;
         height: auto;
-        margin: 1.5rem 3rem;
+        margin: 1.5rem;
+        padding: .5rem;
         cursor: pointer;
     }
 
@@ -72,8 +73,8 @@ const rightNavLinks = ref([
     &__link {
         color: rgba(255, 255, 255, 0.65);
         text-decoration: none;
-        font-size: 0.9375rem;
-        margin: 0 1.5rem;
+        font-size: 1rem;
+        margin: 0 2rem;
         transition: color 0.3s ease;
         text-transform: uppercase;
         cursor: pointer;

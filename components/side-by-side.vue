@@ -32,7 +32,7 @@ const imageClass = computed(() => {
   @include font-serif;
   font-weight: 400;
   text-align: center;
-  max-width: $md;
+  max-width: $container-max-w;
   text-align: left;
   padding: 2rem;
 

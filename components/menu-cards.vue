@@ -103,7 +103,7 @@ const menuData = ref([
   font-size: 2rem;
   line-height: 1;
   padding: 2rem;
-  max-width: 1280px;
+  max-width: $container-max-w;
 
   @media (min-width: $sm) {
     grid-template-rows: repeat(3, 1fr);
@@ -143,6 +143,7 @@ const menuData = ref([
     line-height: 1.5;
     padding: 2.5rem 3rem;
     border: solid 1px rgba(177, 116, 63, 0.5);
+    min-height: 340px;
 
     &:first-child {
       display: flex;
