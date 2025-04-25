@@ -155,6 +155,13 @@ const menuData = ref([
         url("https://res.cloudinary.com/eddieebeling/image/upload/h_800/v1745322730/Huli_k78sc4.jpg");
       background-size: cover;
     }
+
+    &:nth-child(3) {
+      background-image: url('https://res.cloudinary.com/eddieebeling/image/upload/c_scale,e_background_removal,w_1000/v1745619780/BestSeller_Preferred_f3yztm.png');
+      background-position: right .5rem top .5rem;
+      background-repeat: no-repeat;
+      background-size: 140px 140px;
+    }
   }
 
   &__list {
