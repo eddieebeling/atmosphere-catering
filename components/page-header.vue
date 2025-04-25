@@ -57,16 +57,12 @@ const rightNavLinks = ref([
     }
 
     &__nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: none;
 
-        @media (max-width: $xs) {
-            display: none;
-        }
-
-        @media (min-width: $xs) and (max-width: $sm) {
-            display: none;
+        @media (min-width: $sm) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 
@@ -74,13 +70,17 @@ const rightNavLinks = ref([
         color: rgba(255, 255, 255, 0.65);
         text-decoration: none;
         font-size: 1rem;
-        margin: 0 2rem;
+        margin: 0 1rem;
         transition: color 0.3s ease;
         text-transform: uppercase;
         cursor: pointer;
 
         &:hover {
             color: rgba(255, 255, 255, 1);
+        }
+
+        @media (min-width: $md) {
+            margin: 0 2rem;
         }
     }
 }

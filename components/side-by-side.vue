@@ -53,13 +53,17 @@ const imageClass = computed(() => {
   }
 
   @media (min-width: $md) {
-    padding: 3rem 0;
+    padding: 3rem 2rem;
     grid-template-columns: 1fr 1fr;
     grid-gap: 6rem;
 
     &.image-right {
       direction: rtl;
     }
+  }
+
+  @media (min-width: $lg) {
+    padding: 3rem 0 5rem;
   }
 
   h2 {
