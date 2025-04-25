@@ -28,7 +28,7 @@
       <span>Event Details</span>
       <textarea id="message" name="message" required></textarea>
     </label>
-    <div>
+    <div class="form__button">
       <button type="submit">Send Message</button>
     </div>
   </form>
@@ -43,26 +43,6 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-
-  button[type="submit"] {
-    @include font-sans-serif;
-    background: rgba(177, 116, 63, 0.8);
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: 600;
-    font-size: 0.9375rem;
-    padding: 0.9375rem 1.5rem;
-    border-radius: 0.25rem;
-    border: none;
-    cursor: pointer;
-    margin-top: 1rem;
-    transition: all 0.2s ease-in-out;
-
-    &:hover {
-      background: rgba(177, 116, 63, 0.9);
-      transform: scale(1.05);
-    }
-  }
 
   &__label {
     padding: 0.8125rem 0;
@@ -97,6 +77,28 @@
     textarea {
       height: 140px;
     }
+  }
+
+  &__button {
+    button[type="submit"] {
+    @include font-sans-serif;
+    background: rgba(177, 116, 63, 0.8);
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    padding: 0.9375rem 1.5rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background: rgba(177, 116, 63, 0.9);
+      transform: scale(1.05);
+    }
+  }
   }
 }
 </style>

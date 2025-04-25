@@ -123,7 +123,7 @@ const menuData = ref([
     font-size: 2.5rem;
     line-height: 1.1;
     margin: 0 0 1rem 0;
-    color: #fff;
+    color: rgb(255, 255, 255);
   }
 
   &__title {
