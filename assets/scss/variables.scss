@@ -1,0 +1,19 @@
+$xs: 600px;
+$sm: 900px;
+$md: 1240px;
+$lg: 1440px;
+$xl: 1920px;
+
+@mixin font-serif {
+  font-family: "Libre Caslon Display", serif;
+}
+
+@mixin font-sans-serif {
+  font-family: "Roboto", sans-serif;
+}
+
+@mixin font-monospace {
+  font-family:
+    "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono",
+    "Source Code Pro", monospace;
+}

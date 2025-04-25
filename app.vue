@@ -6,15 +6,24 @@
 
 <script setup>
 useHead({
-  title: 'Atmosphere Catering - Chef-driven catering for the tastefully refined',
+  title:
+    "Atmosphere Catering - Chef-driven catering for the tastefully refined",
   meta: [
-    { name: 'description', content: 'Elevate your atmosphere. Chef-driven catering for the tastefully refined.' },
-    { name: 'keywords', content: 'Professional Catering for Parties, Events, Celebrations, and Private Dining in Metro Phoenix, Mesa, Tempe, Chandler, Gilbert, and Scottsdale, Arizona.' }
+    {
+      name: "description",
+      content:
+        "Elevate your atmosphere. Chef-driven catering for the tastefully refined.",
+    },
+    {
+      name: "keywords",
+      content:
+        "Professional Catering for Parties, Events, Celebrations, and Private Dining in Metro Phoenix, Mesa, Tempe, Chandler, Gilbert, and Scottsdale, Arizona.",
+    },
   ],
   bodyAttrs: {
-    class: 'dark-theme'
-  }
-})
+    class: "dark-theme",
+  },
+});
 </script>
 
 <style lang="scss">
