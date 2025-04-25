@@ -6,18 +6,25 @@
 
 <script setup>
 useHead({
-  title:
-    "Atmosphere Catering - Chef-driven catering for the tastefully refined",
+  title: "Atmosphere Catering - Chef-driven catering for the tastefully refined",
   meta: [
     {
       name: "description",
-      content:
-        "Elevate your atmosphere. Chef-driven catering for the tastefully refined.",
+      content: "Elevate your atmosphere. Chef-driven catering for the tastefully refined.",
     },
     {
       name: "keywords",
-      content:
-        "Professional Catering for Parties, Events, Celebrations, and Private Dining in Metro Phoenix, Mesa, Tempe, Chandler, Gilbert, and Scottsdale, Arizona.",
+      content: "Professional Catering for Parties, Events, Celebrations, and Private Dining in Metro Phoenix, Mesa, Tempe, Chandler, Gilbert, and Scottsdale, Arizona.",
+    },
+  ],
+  link: [
+    {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap",
+    },
+    {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap",
     },
   ],
   bodyAttrs: {
@@ -29,15 +36,15 @@ useHead({
 <style lang="scss">
 @use "@/assets/scss/variables.scss" as *;
 @use "animate.css/animate" as *;
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap");
 
 html {
   box-sizing: border-box;
 }
+
 * {
   box-sizing: inherit;
 }
+
 body {
   margin: 0;
   padding: 0;
