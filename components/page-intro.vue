@@ -12,25 +12,20 @@ const subIntro = ref("Chef-driven catering for the tastefully refined");
 <style lang="scss">
 @use "@/assets/scss/variables.scss" as *;
 .page-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 8% 4% 6% 4%;
   color: rgba(255, 255, 255, 0.85);
-  font-size: 3.5rem;
+  font-size: 2.25rem;
   width: 100vw;
   line-height: 1.2;
   @include font-serif;
   font-weight: 400;
   text-align: center;
   margin: 0;
-
-  @media (max-width: $xs) {
-    font-size: 3rem;
-    max-width: 80%;
-  }
-
-  @media (min-width: $xs) and (max-width: $sm) {
-    max-width: 85%;
-    font-size: 3.75rem;
-  }
+  max-width: 80%;
 
   @media (min-width: $sm) and (max-width: $md) {
     max-width: 65%;
@@ -45,7 +40,17 @@ const subIntro = ref("Chef-driven catering for the tastefully refined");
   span {
     display: block;
     font-style: italic;
-    font-size: 3.25rem;
+    font-size: 2rem;
+    text-align: center;
+
+    @media (min-width: $sm) and (max-width: $md) {
+      max-width: 85%;
+      font-size: 2.75rem;
+    }
+    @media (min-width: $md) {
+      max-width: 80%;
+      font-size: 3rem;
+    }
   }
 
   &::after {

@@ -68,35 +68,27 @@ const imageClass = computed(() => {
 
   h2 {
     @include font-serif;
-    font-size: 2.75rem;
+    font-size: 2.25rem;
     font-weight: 300;
     margin: 1.5rem 0;
     padding: 0;
     direction: ltr;
 
-    @media (max-width: $xs) {
-      font-size: 2.25rem;
-    }
-
-    @media (min-width: $xs) and (max-width: $sm) {
-      font-size: 2.5rem;
+    @media (min-width: $md) {
+      font-size: 2.75rem;
     }
   }
 
   p {
     @include font-sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     line-height: 1.5;
     font-weight: 300;
     margin: 0 0 1rem 0;
     direction: ltr;
 
-    @media (max-width: $xs) {
-      font-size: 1.125rem;
-    }
-
-    @media (min-width: $xs) and (max-width: $sm) {
-      font-size: 1.125rem;
+    @media (min-width: $md) {
+      font-size: 1.25rem;
     }
   }
 

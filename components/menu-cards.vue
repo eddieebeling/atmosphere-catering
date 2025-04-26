@@ -141,9 +141,16 @@ const menuData = ref([
     color: rgba(255, 255, 255, 0.85);
     font-size: 1.25rem;
     line-height: 1.5;
-    padding: 2.5rem 3rem;
+    padding: 2rem 1.5rem;
     border: solid 1px rgba(177, 116, 63, 0.5);
     min-height: 340px;
+
+    @media (min-width: $sm) {
+      padding: 2.25rem 2rem;
+    }
+    @media (min-width: $md) {
+      padding: 2.5rem 3rem;
+    }
 
     &:first-child {
       display: flex;
@@ -160,7 +167,11 @@ const menuData = ref([
       background-image: url('https://res.cloudinary.com/eddieebeling/image/upload/c_scale,e_background_removal,w_1000/v1745619780/BestSeller_Preferred_f3yztm.png');
       background-position: right .5rem top .5rem;
       background-repeat: no-repeat;
-      background-size: 140px 140px;
+      background-size: 110px 110px;
+
+      @media (min-width: $md) {
+        background-size: 140px 140px;
+      }
     }
   }
 
