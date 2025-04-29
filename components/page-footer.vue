@@ -1,6 +1,6 @@
 <template>
 	<div class="page-footer">
-		<span>Copyright &copy; {{ currentYear }} Atmosphere Catering - All Rights Reserved.</span>
+		<span>Copyright &copy; {{ currentYear }} Atmosphere Catering, LLC. - All Rights Reserved.</span>
 		<ul id="social" class="page-footer__social">
 			<li class="page-footer__social--item">
 				<a href="https://www.instagram.com/atmospherecatering/" target="_blank" rel="noopener noreferrer"

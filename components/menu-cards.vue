@@ -163,14 +163,15 @@ const menuData = ref([
       background-size: cover;
     }
 
+    &:nth-child(2),
     &:nth-child(3) {
       background-image: url('https://res.cloudinary.com/eddieebeling/image/upload/c_scale,e_background_removal,w_1000/v1745619780/BestSeller_Preferred_f3yztm.png');
       background-position: right .5rem top .5rem;
       background-repeat: no-repeat;
-      background-size: 110px 110px;
+      background-size: 80px 80px;
 
       @media (min-width: $md) {
-        background-size: 140px 140px;
+        background-size: 110px 110px;
       }
     }
   }

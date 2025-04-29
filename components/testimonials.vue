@@ -15,7 +15,7 @@
             <star></star>
           </div>
           <div class="testimonials__attribution">
-            <strong>{{ item.name }}</strong> &bull;
+            <strong>{{ item.name }}</strong> &mdash;
             <span>{{ item.position }} at {{ item.company }}</span>
           </div>
         </blockquote>
@@ -27,30 +27,22 @@
 <script setup>
 const testimonials = ref([
   {
-    text: "Atmosphere Catering is the best! The food was delicious and the service was impeccable.",
-    name: "John Doe",
-    position: "CEO",
-    company: "Company Name",
-    image:
-      "https://res.cloudinary.com/eddieebeling/image/upload/w_300/v1745430144/16124205_1840922989518177_2606415304602943488_a_pdlovt.jpg",
+    text: "In my experience, catering is almost always setting the floor for the Minimal Viable Product; yes it’s food, but it’s a chore to eat. Justin’s food is a whole other sport. It’s like having your favorite treat restaurant come to you. It’s incredibly good, and I can’t believe how much bad food I’ve eaten when this could have been an option.",
+    name: "Luke K",
+    position: "Founder & Producer",
+    company: "Borah Media"
   },
   {
-    text: "I can't recommend Atmosphere Catering enough! They made our event unforgettable.",
-    name: "Jane Smith",
-    position: "Event Planner",
-    company: "Event Company",
+    text: "We are always blown away by Justin’s consistency serving delicious, flavorful and appetizing food. He delivers attention to every detail which makes an impeccable presentation. His ability to bring the best locally sourced ingredients and incredible flavors to every dish, makes for an exciting dining experience every time! We would trust him to cater any event because his passion and confidence for culinary arts go hand and hand.",
+    name: "Sarah F",
+    position: "Professional Stylist",
+    company: "PürElement Hair Studio"
   },
   {
-    text: "The food was amazing and the staff was so friendly. I will definitely use them again!",
-    name: "Bob Johnson",
-    position: "Marketing Director",
-    company: "Marketing Company",
-  },
-  {
-    text: "Atmosphere Catering exceeded my expectations! The food was delicious and beautifully presented. My offices love it!",
-    name: "Candi Ebeling",
+    text: "Atmosphere Catering provided an exceptional experience! The food was not only delicious but also presented with such elegance and care. Justin and his team went above and beyond to ensure everything was perfect. My offices love it!",
+    name: "Candi E",
     position: "Uro-Oncology Account Manager",
-    company: "Sumitomo Pharma America",
+    company: "Sumitomo Pharma America"
   },
 ]);
 const testimonialIndex = ref(0);
@@ -58,7 +50,7 @@ const cycleTestimonials = () => {
   setInterval(() => {
     testimonialIndex.value =
       (testimonialIndex.value + 1) % testimonials.value.length;
-  }, 7500);
+  }, 20000);
 };
 
 onMounted(() => {

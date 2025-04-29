@@ -3,8 +3,7 @@
         <div class="contact__content">
             <h2>Let's chat...</h2>
             <p>
-                Call or email today for more information and to schedule your event, and
-                let's get creative together!
+                Call or email today for more information or to schedule your event, and let's get creative together!
             </p>
             <p>
                 Email: <a :href="`mailto:${email}`">{{ email }}</a><br />
