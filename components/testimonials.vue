@@ -35,7 +35,7 @@ const testimonials = ref([
   {
     text: "We are always blown away by Justin’s consistency serving delicious, flavorful and appetizing food. He delivers attention to every detail which makes an impeccable presentation. His ability to bring the best locally sourced ingredients and incredible flavors to every dish, makes for an exciting dining experience every time! We would trust him to cater any event because his passion and confidence for culinary arts go hand and hand.",
     name: "Sarah F",
-    position: "Professional Stylist",
+    position: "Owner",
     company: "PürElement Hair Studio"
   },
   {
